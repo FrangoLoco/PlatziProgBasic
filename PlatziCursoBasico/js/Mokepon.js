@@ -120,17 +120,21 @@ function combate (){
 function revisarVidas(){
     if (vidaEnemigo == 0){
         alert('Ganaste')
+        desabalitarBotones()
        }
        else if(vidaJugador == 0){
         alert('Perdiste')
-
-        let botonFuego = document.getElementById('boton-fuego')
-        botonFuego.disabled = true
-        let botonAgua = document.getElementById('boton-agua')
-        botonAgua.disabled = true
-        let botonTierra = document.getElementById('boton-tierra')
-        botonTierra.disabled = true
+        desabalitarBotones()
        }
+}
+
+function desabalitarBotones(){
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
 }
 
 function reiniciarJuego(){
